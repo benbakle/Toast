@@ -5,12 +5,12 @@ interface ICountDownProps {
   countDownFrom: number;
 }
 
-export default function CountDown({ countDownFrom: from }: ICountDownProps) {
-  const [countDown, setCountDown] = useState(from);
+export default function CountDown({ countDownFrom }: ICountDownProps) {
+  const [countDown, setCountDown] = useState(countDownFrom);
 
   useEffect(() => {
-    setCountDown(from - 1);
-  }, [from]);
+    setCountDown(countDownFrom - 1);
+  }, [countDownFrom]);
 
   useEffect(() => {
     if (countDown > 0)
