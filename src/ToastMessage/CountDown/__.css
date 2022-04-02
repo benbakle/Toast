@@ -1,0 +1,15 @@
+.count-down {
+    width: 2em;
+    height: 2em;
+    line-height: 0;
+    margin-top:-.3em;
+    font-size: .75em;
+    font-weight: 700;
+    letter-spacing: 0;
+    border-radius: 100%;
+    margin-bottom:-.3em;
+    place-items: center;
+    display: inline-grid;
+    border: .2em solid #fff;
+
+}

@@ -1,0 +1,25 @@
+{
+  "name": "toast",
+  "version": "1.0.0",
+  "description": "TOAST: A multi messaging React Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benbakle/Toast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benbakle/Toast/issues"
+  },
+  "homepage": "https://github.com/benbakle/Toast#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.43",
+    "typescript": "^4.6.3"
+  }
+}
