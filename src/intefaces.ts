@@ -1,11 +1,12 @@
 import { ReactNode } from 'react';
 
 export type Timeout = number | undefined;
-export type ToastMessageType = 'success' | 'warning' | undefined;
+export type ToastMessageType = 'message' | 'success' | 'warning' | undefined;
 export type ToastMessagePush = (text: string, timeout?: Timeout) => void;
 
 export interface IToastProviderValue {
   messages: IMessage[];
+  toastMessage: ToastMessagePush;
   toastSuccess: ToastMessagePush;
   toastWarning: ToastMessagePush;
   toast: (message: IMessage) => void;

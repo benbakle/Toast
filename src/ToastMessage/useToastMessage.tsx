@@ -5,7 +5,6 @@ const transitionDuration = 300;
 
 const TOAST_MODIFIERS = {
   inView: '--in-view',
-  slidLeft: '--slid-left',
   slidRight: '--slid-right',
   hasCountDown: '--has-count-down',
 };
