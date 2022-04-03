@@ -1,7 +1,11 @@
+import { useState } from 'react';
+import { ToastDemo } from './ToastDemo';
 import ToastMessage from './ToastMessage';
 import { useToast } from './ToastContextProvider';
+import { ToastContextProvider } from './ToastContextProvider';
 import './__.css';
-import { useState } from 'react';
+
+export { ToastContextProvider, ToastMessage, ToastDemo, useToast };
 
 export default function Toast({ justified }: { justified?: boolean }) {
   const { messages } = useToast();
@@ -17,7 +21,7 @@ export default function Toast({ justified }: { justified?: boolean }) {
     <div {...{ className }}>
       <button {...{ onClick: toggleJustified }}>{isJustified ? 'Align Right' : 'Justify'}</button>
       {messages.map(
-        ({ text, type, timeout }, key) => text && <ToastMessage {...{ timeout, type, key }}>{text}</ToastMessage>,
+        ({ text, type, timeout }, key) => text && <ToastMessage {...{ type, timeout, key }}>{text}</ToastMessage>,
       )}
     </div>
   );

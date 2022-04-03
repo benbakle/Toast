@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "TOAST: A multi messaging React Component",
   "main": "index.js",
+  "files": ["lib/**/*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "tslint -p tsconfig.json",
-    "setup": "setup.sh"
+    "runall": "runall.sh"
   },
   "repository": {
     "type": "git",
