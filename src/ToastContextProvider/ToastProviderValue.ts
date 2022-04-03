@@ -8,7 +8,7 @@ export const ToastProviderValue = () => {
     setMessages([...messages, message]);
   };
 
-  const value: IToastProviderValue = {
+  const providerValue: IToastProviderValue = {
     messages,
     toast,
     toastMessage : (text: string, timeout?: number | undefined) => {
@@ -25,5 +25,5 @@ export const ToastProviderValue = () => {
     }
   }
 
-  return value;
+  return providerValue;
 }

@@ -6,8 +6,8 @@ const ToastContext = createContext({} as IToastProviderValue);
 const useToast = () => useContext(ToastContext);
 const value = ToastProviderValue();
 
-const ToastContextProvider = ({ children }: { children: ReactNode}) => (
-  <ToastContext.Provider {...{ value }}>{children}</ToastContext.Provider>
+const ToastContextProvider = ({ children }: { children: ReactNode }) => (
+  <ToastContext.Provider {...{ value, children }} />
 );
 
 export { useToast, ToastContextProvider };
