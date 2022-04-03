@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { IToastMessageProps } from '../intefaces';
+import { IToastMessage, IToastMessageProps } from '../intefaces';
 
 const transitionDuration = 300;
 
@@ -14,9 +14,9 @@ export const useToastMessage = ({ timeout, type }: IToastMessageProps) => {
   const [visible, setVisible] = useState(true);
   const [position, setPosition] = useState(TOAST_MODIFIERS.slidRight);
 
-  const adjustedTimeout = (timeout || -1000) + 1000;
-
   const element = 'toast__message';
+
+  const adjustedTimeout = (timeout || -1000) + 1000;
 
   const typeModifier = type ? ` ${element}--${type}` : '';
   const positionModifier = position ? ` ${element}${position}` : '';
@@ -48,5 +48,10 @@ export const useToastMessage = ({ timeout, type }: IToastMessageProps) => {
     slideAwayAfterTimeout();
   }, [adjustedTimeout, slideAway, slideAwayAfterTimeout, timeout]);
 
-  return { visible, className, slideAway, countDownFrom: adjustedTimeout / 1000 };
+  return {
+    visible,
+    className,
+    slideAway,
+    countDownFrom: adjustedTimeout / 1000,
+  } as IToastMessage;
 };

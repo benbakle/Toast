@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
+import { ICountDownProps } from '../../intefaces';
 import './__.css';
-
-interface ICountDownProps {
-  countDownFrom: number;
-}
 
 export default function CountDown({ countDownFrom }: ICountDownProps) {
   const [countDown, setCountDown] = useState(countDownFrom);
