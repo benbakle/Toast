@@ -1,12 +1,13 @@
-import { createContext, ReactElement, useContext } from 'react';
+import { createContext, ReactNode, useContext } from 'react';
 import { IToastProviderValue } from '../intefaces';
-import { ToastProviderValues } from './ToastProviderValues';
+import { ToastProviderValue } from './ToastProviderValue';
 
 const ToastContext = createContext({} as IToastProviderValue);
 const useToast = () => useContext(ToastContext);
+const value = ToastProviderValue();
 
-const ToastContextProvider = ({ children }: { children: ReactElement | ReactElement[] }) => (
-  <ToastContext.Provider {...{ value: ToastProviderValues() }}>{children}</ToastContext.Provider>
+const ToastContextProvider = ({ children }: { children: ReactNode}) => (
+  <ToastContext.Provider {...{ value }}>{children}</ToastContext.Provider>
 );
 
 export { useToast, ToastContextProvider };
