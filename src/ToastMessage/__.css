@@ -1,79 +1,79 @@
 .toast__message {
-    gap: 1em;
-    left: 100%;
-    opacity: .8;
-    width: auto;
-    display: grid;
-    color: white;
-    cursor: pointer;
-    text-align: left;
-    overflow: hidden;
-    font-weight: 700;
-    max-height: 50vh;
-    font-size:inherit;
-    position: relative;
-    border-width: .2em;
-    padding: .5em 1.5em;
-    border-style: solid;
-    align-items: center;
-    border-radius: .3em;
-    margin-bottom: 0.2em;
-    transition-duration: .3s;
-    border-color: transparent;
-    transform: translateX(-100%);
-    background-color: transparent;
-    box-shadow: 0 0 .1em rgba(0, 0, 0, .2);
+  gap: 1em;
+  left: 100%;
+  opacity: 0.8;
+  width: auto;
+  display: grid;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  font-weight: 700;
+  max-height: 50vh;
+  font-size: inherit;
+  position: relative;
+  border-width: 0.2em;
+  padding: 0.5em 1.5em;
+  border-style: solid;
+  align-items: center;
+  border-radius: 0.3em;
+  margin-bottom: 0.2em;
+  transition-duration: 0.3s;
+  border-color: transparent;
+  transform: translateX(-100%);
+  background-color: transparent;
+  box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.2);
 }
 
-.toast__message+.toast__message {
-    margin-left: 0;
+.toast__message + .toast__message {
+  margin-left: 0;
 }
 
 .toast__message:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    transition-duration: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  transition-duration: inherit;
 }
 
-.toast__message+.toast__message {
-    margin-left: 0;
+.toast__message + .toast__message {
+  margin-left: 0;
 }
 
 .toast__message:hover:before {
-    opacity: .2;
+  opacity: 0.2;
 }
 
 .toast__message--message {
-    background-color: #0098ff;
+  background-color: #0098ff;
 }
 
 .toast__message--warning {
-    background-color: #ef4023;
+  background-color: #ef4023;
 }
 
 .toast__message--success {
-    background-color: #1dbd45;
+  background-color: #1dbd45;
 }
 
 .toast__message--slid-left {
-    left: 100vw;
-    transform: none;
+  left: 100vw;
+  transform: none;
 }
 
 .toast__message--slid-right {
-    left: 100vw;
-    max-height: 0;
-    transform: translateX(100%);
+  left: 100vw;
+  max-height: 0;
+  transform: translateX(100%);
 }
 
 .toast__message--has-count-down {
-    grid-template-columns: 2em calc(100% - 2em);
+  grid-template-columns: 2em calc(100% - 2em);
 }
