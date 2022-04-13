@@ -32,6 +32,6 @@
     "tslint-config-prettier": "^1.18.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@benbakle:registry": "https://npm.pkg.github.com"
   }
 }
