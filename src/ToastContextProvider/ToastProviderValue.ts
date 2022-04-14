@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IMessage, IToastProviderValue } from '../intefaces';
 
-export const ToastProviderValue = () => {
+export const useToastProviderValue = () => {
   const [messages, setMessages] = useState([] as IMessage[]);
 
   const toast = (message: IMessage) => {
@@ -9,10 +9,10 @@ export const ToastProviderValue = () => {
   };
 
   const providerValue: IToastProviderValue = {
-    messages,
     toast,
+    messages,
     toastMessage: (text: string, timeout?: number | undefined) => {
-      const message = { text, timeout, type: 'success' } as IMessage;
+      const message = { text, timeout, type: 'message' } as IMessage;
       toast(message);
     },
     toastSuccess: (text: string, timeout?: number | undefined) => {
