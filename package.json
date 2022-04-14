@@ -8,8 +8,9 @@
   ],
   "scripts": {
     "test": "exit 0",
-    "build": "tsc",
+    "build": "tsc && npm run copy",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\"",
+    "copy": "copyfiles \"./src/**/*.css\"  \"./lib\"",
     "lint": "tslint -p tsconfig.json",
     "runall": "runall.sh"
   },
@@ -25,11 +26,12 @@
   },
   "homepage": "https://github.com/benbakle/Toast#readme",
   "devDependencies": {
-    "tslint": "^6.1.3",
-    "prettier": "^2.6.2",
-    "typescript": "^4.6.3",
     "@types/react": "^17.0.43",
-    "tslint-config-prettier": "^1.18.0"
+    "copyfiles": "^2.4.1",
+    "prettier": "^2.6.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.3"
   },
   "publishConfig": {
     "@benbakle:registry": "https://npm.pkg.github.com"

@@ -4,7 +4,7 @@
       "module": "commonjs",
       "jsx": "react-jsx",
       "declaration": true,
-      "outDir": "./lib",
+      "outDir": "./lib/src",
       "strict": true
     },
     "include": ["src"],
