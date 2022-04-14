@@ -1,6 +1,6 @@
 {
   "name": "@benbakle/toast",
-  "version": "0.0.19",
+  "version": "0.0.2",
   "description": "TOAST: A multi messaging React Component",
   "main": "index.js",
   "files": [
