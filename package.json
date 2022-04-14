@@ -34,6 +34,7 @@
     "typescript": "^4.6.3"
   },
   "publishConfig": {
-    "@benbakle:registry": "https://npm.pkg.github.com"
+    "@benbakle:registry": "https://npm.pkg.github.com",
+    "registry": "https://registry.npmjs.org/"
   }
 }
